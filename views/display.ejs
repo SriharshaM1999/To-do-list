@@ -1,0 +1,114 @@
+<html>
+    <head>
+        <title>
+           
+        </title>
+        <link rel="stylesheet" href="/css/display.css" type="text/css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body>
+
+    
+     <div class="display">
+
+        <!-- code for div1(TODO APP) -->
+
+        <div id="div1">
+            <p>TODO App</p>
+        </div>
+
+        <form action="new" method="POST">
+
+        <!-- code for div2(Description) -->
+        <div id="div2"> 
+            <p>DESCRIPTION</p>
+            <input id="textplace" type="text" name="desc" placeholder="What do you need to do" maxlength="35"required>
+            <input id="id" type="text" name="id" style="display:none;">
+        </div>
+
+        <!-- code for div3 -->
+
+        <div id="div3">
+            <!-- code for category -->
+           
+            <div>
+                <label for="select">Choose a pet:</label>
+                <select id="select" name="category" placeholder="Choose a category" required> 
+                    <option value="empty">--Choose a Category--</option>
+                    <option value="personal">Personal</option>
+                    <option value="work">Work</option>
+                    <option value="school">school</option>
+                    <option value="cleaning">Cleaning</option>
+             
+                </select>
+            
+            </div>
+
+            <!-- code for due date -->
+            <div>
+                <label for="date">Due Date</label>
+            <input id="date" type="date" name="date" placeholder="dd/mm/yyyy" >
+
+           </div>
+
+        
+       
+        </div>
+
+        <!-- code for div4(BUTTONS) -->
+
+        <div id="div4">
+            <button type="submit" id="one">
+                <i class="fa fa-plus" aria-hidden="true"></i>
+
+                ADD TASK
+            </button>
+            
+            <button type="submit" id="two" formaction="delete">
+                <i class="fa fa-trash-o" aria-hidden="true"></i>
+
+                DELETE TASKS
+            </button>
+        </div>
+    
+
+        <!-- code for diplaying all the tasks -->
+
+        <div id="div5">
+            
+           
+                
+                <% for( var i of list){%>
+                
+                    <div class="inside">
+                        <div class="first">
+                        <input type="checkbox" class="checkbox">
+                        <div class="inside-inner">
+                            <p class="text"><%=i.desc%></p>
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+
+                            <span class="dates"><%=i.date%></span>
+                             <p class="id1"  style="display:none;"><%=i._id%></p> 
+                        </div>
+                        </div>
+                        <div class="second">
+                            <p class="selected"><%=i.category%></p>
+                        </div>
+                    </div>
+                
+                
+                <%}%>
+
+            
+            
+        </div>
+    </form>
+     
+</div>
+
+<script src="/js/display.js"></script>
+    </body>
+
+    
+</html>

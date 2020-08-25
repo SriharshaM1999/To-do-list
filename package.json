@@ -1,0 +1,26 @@
+{
+  "name": "backend-majorproject",
+  "version": "1.0.0",
+  "description": "my first backend project",
+  "main": "index.js",
+  "scripts": {
+    "start":"nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SriharshaM1999/Major-Project.git"
+  },
+  "author": "M.Sriharsha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SriharshaM1999/Major-Project/issues"
+  },
+  "homepage": "https://github.com/SriharshaM1999/Major-Project#readme",
+  "dependencies": {
+    "ejs": "^3.1.2",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.13",
+    "nodemon": "^2.0.4"
+  }
+}
